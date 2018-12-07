@@ -82,18 +82,22 @@ func Colorize(colorsSlice []string, format string, a ...interface{}) (s string) 
 	return
 }
 
+// Blue returns string on red color
 func Blue(format string, a ...interface{}) string {
 	return colored(FgBlue, format, a...)
 }
 
+// Red returns string on red color
 func Red(format string, a ...interface{}) string {
 	return colored(FgRed, format, a...)
 }
 
+// Green returns string on green color
 func Green(format string, a ...interface{}) string {
 	return colored(FgGreen, format, a...)
 }
 
+// Yellow returns string on yellow color
 func Yellow(format string, a ...interface{}) string {
 	return colored(FgYellow, format, a...)
 }
