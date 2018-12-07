@@ -66,7 +66,7 @@ var (
 )
 
 // Colorize provides output of the string with color
-func Colorize(colorsSlice []string, format string, a ...interface{}) (s string) {
+func Colorize(colorsSlice []string, format string, a ...interface{}) string {
 	buf := new(bytes.Buffer)
 	for _, color := range colorsSlice {
 		buf.WriteString(colors[color])
@@ -78,8 +78,7 @@ func Colorize(colorsSlice []string, format string, a ...interface{}) (s string) 
 		buf.WriteString(fmt.Sprintf(format, a...))
 	}
 	buf.WriteString(colors[Reset])
-	s = buf.String()
-	return
+	return buf.String()
 }
 
 // Blue returns string on red color
